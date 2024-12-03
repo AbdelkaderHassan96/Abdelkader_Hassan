@@ -23,5 +23,20 @@
     <footer>
         <p>© 2025 Abdelkader Hassan</p>
     </footer>
+
+    <!-- مكتبة Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- كود التفعيل -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var typed = new Typed('.typed', {
+                strings: document.querySelector('.typed').getAttribute('data-typed-items').split(', '),
+                typeSpeed: 100, // سرعة الكتابة
+                backSpeed: 50,  // سرعة الحذف
+                loop: true      // تكرار النصوص
+            });
+        });
+    </script>
 </body>
 </html>
