@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url('back.webp'); /* تأكد من المسار الصحيح للصورة */
+    background-image: url('https://github.com/AbdelkaderHassan96/Abdelkader_Hassan/blob/main/back.webp'); /* تأكد من المسار الصحيح للصورة */
     background-size: cover; /* تجعل الصورة تغطي كامل الشاشة */
     background-attachment: fixed; /* تجعل الخلفية ثابتة عند التمرير */
     background-repeat: no-repeat; /* تمنع تكرار الصورة */
