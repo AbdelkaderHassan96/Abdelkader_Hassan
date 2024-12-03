@@ -2,19 +2,19 @@
 :root {
     --bg-color: #000000;
     --text-color: #ffffff;
-    --button-bg: #4CAF50; /* لون الخلفية للأزرار */
-    --button-hover-bg: #45a049; /* اللون عند المرور على الأزرار */
-    --link-color: #4CAF50; /* لون الروابط */
-    --link-hover-color: #45a049; /* اللون عند المرور على الروابط */
+    --button-bg: #4CAF50;
+    --button-hover-bg: #45a049;
+    --link-color: #4CAF50;
+    --link-hover-color: #45a049;
 }
 
 /* تنسيق الجسم مع الخلفية الثابتة */
 body {
-    background-image: url('back.webp'); /* الصورة كخلفية */
-    background-size: cover; /* تغطي الشاشة بالكامل */
-    background-attachment: fixed; /* تجعل الخلفية ثابتة */
+    background-image: url('back.webp');
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center; /* الصورة في المنتصف */
+    background-position: center;
     color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0;
@@ -31,9 +31,9 @@ header {
     transform: translate(-50%, -50%);
     max-width: 900px;
     width: 90%;
-    background: rgba(0, 0, 0, 0.6); /* خلفية داكنة مع شفافية */
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* تأثير الظل على النصوص */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 header h1 {
@@ -70,11 +70,15 @@ header p {
     text-decoration: none;
     color: var(--link-color);
     margin: 0 0.5em;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .social-links .social-icon:hover {
     color: var(--link-hover-color);
+}
+
+.social-links i {
+    margin-right: 8px;
 }
 
 /* تنسيق الفوتر */
