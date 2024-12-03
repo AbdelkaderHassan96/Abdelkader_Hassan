@@ -1,3 +1,13 @@
+// تشغيل Typed.js عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function () {
+    var typed = new Typed('.typed', {
+        strings: document.querySelector('.typed').getAttribute('data-typed-items').split(', '),
+        typeSpeed: 100, // سرعة الكتابة
+        backSpeed: 50,  // سرعة الحذف
+        loop: true      // تكرار النصوص
+    });
+});
+
 // تحديد الأزرار والعناصر الخاصة بها
 const navButtons = document.querySelectorAll('.nav-button');
 const sections = document.querySelectorAll('section');
