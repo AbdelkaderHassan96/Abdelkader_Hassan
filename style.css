@@ -64,6 +64,8 @@ header p {
 
 .social-links i {
     margin-right: 8px;
+    font-size: 1em; /* تغيير حجم أيقونات الفونت */
+
 }
 
 /* تنسيق الفوتر */
