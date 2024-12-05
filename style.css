@@ -1,81 +1,68 @@
-/* إعداد الجذر لتعريف الألوان */
-:root {
-    --bg-color: #000000;
-    --text-color: #ffffff;
-    --button-bg: #49aeff;
-    --button-hover-bg: #49aeff;
-    --link-color: #49aeff;
-    --link-hover-color: #49aeff;
+/* إعداد شريط التنقل */
+.navbar {
+    background: rgba(0, 0, 0, 0.8); /* خلفية نصف شفافة */
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* فوق باقي العناصر */
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* إضافة ظل خفيف */
 }
 
-/* تنسيق الجسم مع الخلفية الثابتة */
-body {
-    background-image: url('back.webp');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
+.navbar ul {
+    list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px; /* المسافة بين العناصر */
 }
 
-/* تنسيق الهيدر */
-header {
-    text-align: center;
-    padding: 4em 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 900px;
-    width: 90%;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+.navbar ul li {
+    position: relative;
 }
 
-header h1 {
-    font-size: 3em;
-    margin: 0.5em 0;
-}
-
-header p {
-    font-size: 1.5em;
-    margin: 1em 0;
-}
-
-
-.social-links {
-    margin-top: 2em;
-}
-
-.social-links .social-icon {
+.navbar a {
     text-decoration: none;
-    color: var(--link-color);
-    margin: 0 0.5em;
+    color: var(--text-color);
     font-size: 1em;
+    transition: color 0.3s;
+    padding: 0.5em 1em;
+    border-radius: 5px; /* حواف مستديرة */
 }
 
-.social-links .social-icon:hover {
+.navbar a:hover,
+.navbar .active {
     color: var(--link-hover-color);
+    background: var(--button-bg);
 }
 
-.social-links i {
-    margin-right: 8px;
-    font-size: 1em; /* تغيير حجم أيقونات الفونت */
-
+.mobile-nav-toggle {
+    display: none; /* إخفاء الأيقونة في الشاشات العادية */
+    font-size: 1.5em;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
-/* تنسيق الفوتر */
-footer {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding: 0.5em; /* تقليل المسافة الداخلية */
-    font-size: 1em; /* تصغير حجم النصوص */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+/* التنقل في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* إخفاء القائمة */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul.active {
+        display: flex; /* إظهار القائمة عند الضغط */
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* إظهار الأيقونة في الشاشات الصغيرة */
+    }
 }
